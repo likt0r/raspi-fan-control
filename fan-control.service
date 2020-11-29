@@ -1,0 +1,14 @@
+[Unit]
+Description=This service control fan depending on cpu and gpu temperatur
+After=multi-user.target
+
+
+[Service]
+ExecStart=/usr/bin/python -u main.py
+WorkingDirectory=/home/pi/raspi-fan-control
+Environment=PYTHONUNBUFFERED=1
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
