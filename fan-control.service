@@ -4,7 +4,7 @@ After=multi-user.target
 
 
 [Service]
-ExecStart=/usr/bin/python -u main.py
+ExecStart=/usr/bin/python -u fan_control.py
 WorkingDirectory=/home/pi/raspi-fan-control
 Environment=PYTHONUNBUFFERED=1
 Restart=always
